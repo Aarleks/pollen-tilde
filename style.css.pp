@@ -28,3 +28,38 @@ html, body {
 	padding: 10px;
 }
 
+
+h1 {
+	font-size: 2.5em;
+	line-height: 1em;
+	text-decoration: underline;
+}
+
+h1.title {
+	font-size: 3.7em;
+	line-height: 1em;
+
+}
+
+h2 {
+	line-height: 1em;
+	text-decoration: underline;
+}
+
+a {
+	color: #333;
+}
+
+a:hover {
+	background: #fbf3f3;
+	border-radius: 6px;
+	transition-duration: 0.3s;
+}
+
+h1.title:hover {
+	background: #fffff8;
+}
+
+hr {
+        color: #999;
+}

@@ -12,10 +12,6 @@
 <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-This file is ◊here
-
-  <h1 class="title"><a href=https://dralexnorman.net>~acn</a></h1>
-
     ◊(->html doc)
   </body>
 </html>
