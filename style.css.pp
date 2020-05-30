@@ -4,6 +4,9 @@
 
 ◊(define lineheight (string-append (number->string LINEHEIGHT) "rem"))
 
+◊(define (x-lineheight multiple) 
+    (string-append (real->decimal-string (* LINEHEIGHT multiple) 2) "rem"))
+
 @font-face {
       font-family: 'IBM Plex Mono';
       src: url("fonts/IBMPlexMono-Regular.woff2") format('woff2'),
@@ -17,8 +20,8 @@ html, body {
 	margin: auto;
 	text-align: left;
 	line-height: ◊lineheight;
-	/*vfont-family: 'IBM Plex Mono';, menlo, monospace;*/
-	font-size: ◊lineheight;
+	font-family: 'IBM Plex Mono';, menlo, monospace;
+	font-size: ◊x-lineheight[0.88];
 	height: 100%;
 	background: #fffff8;
 	color: #333;
