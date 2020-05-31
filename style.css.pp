@@ -4,7 +4,7 @@
 
 ◊(define lineheight (string-append (number->string LINEHEIGHT) "rem"))
 
-◊(define (x-lineheight multiple) 
+◊(define (x-lineheight multiple)
     (string-append (real->decimal-string (* LINEHEIGHT multiple) 2) "rem"))
 
 @import url('https://use.fontawesome.com/releases/v5.6.0/css/all.css');
@@ -16,6 +16,25 @@
       url("fonts/IBMPlexMono-Regular.woff") format("woff");
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
+}
+
+@font-face {
+      font-family: 'IBM Plex Mono Italic';
+      src: url("fonts/IBMPlexMono-Italic.woff2") format('woff2'),
+      url("fonts/IBMPlexMono-Italic.woff") format("woff");
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+}
+
+@font-face {
+      font-family: 'IBM Plex Mono Bold';
+      src: url("fonts/IBMPlexMono-Bold.woff2") format('woff2'),
+      url("fonts/IBMPlexMono-Bold.woff") format("woff");
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
 }
 
 html, body {
