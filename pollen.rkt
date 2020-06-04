@@ -31,6 +31,9 @@
 (define line
   '(hr))
 
+(define (em . text)
+  `(em ,@text))
+
 (define (date-string)
   (parameterize [(date-display-format 'iso-8601)]
     (date->string (current-date))))

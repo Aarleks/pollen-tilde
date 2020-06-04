@@ -4,25 +4,22 @@ A test of [Matthew Butterick's `pollen`](https://practicaltypography.com/) langu
 
 ## Things I want to do
 
-* DONE add a rolling blog to the index;
-* DONE make the index page a bit more purposeful;
+* add a rolling blog to the index;
+* make the index page a bit more purposeful;
 * add a resources page;
 * add a teaching page;
 * add a cv page;
-* DONE add an rss capability
+* add an rss capability
 * set up a cronjob on the site to look for git commits and git pull when there is a new one
 
 ---
 
 ## Website Build Script
 
-* initialise site in folder if none exists
-    * make new
-    * git clone
-* give options for actions:
+* shell script to build the site
+* shell script to add/edit content
     * create new post;
     * update page;
-    * build with pollen
 
 ```sh
 # take homepage file
