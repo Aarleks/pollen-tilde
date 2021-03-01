@@ -26,23 +26,24 @@
   `(h1 ,@elements))
 
 (define (section name level)
-  '(section [[id ,name]] [[class ,level]]))
+  `(section [[id ,name]] [[class ,level]]))
 
 (define line
-  '(hr))
+  `(hr))
 
 (define (em . text)
   `(em ,@text))
 
 (define (date-string)
-  (parameterize [(date-display-format 'iso-8601)]
+  (parameterize [(date-display-format 'rfc2822)]
     (date->string (current-date))))
+
+(define (sig . xs)
+  `(div [(class "sig")] ,@xs))
 
 ;(define (blog-list)
   ;get the titles
   ;get the dates
-  ;get the tags
   ;print as
   ;Title - Date
-  ;#Tags
 ;  )

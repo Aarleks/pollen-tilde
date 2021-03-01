@@ -5,7 +5,7 @@
     <meta name="author" content="Alex Norman" />
     <title>~acn</title>
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="/styles/nord.css">
+<link rel="stylesheet" href="styles/solarized-dark.css">
 
 <script src="highlight.pack.js"></script>
 
