@@ -98,10 +98,11 @@ topic {
 }
 
 .subhead {
+    font-family: "IBM Plex Sans Condensed";
     text-transform: lowercase;
     font-variant: small-caps;
     display: block;
-    font-weight: bolder;
+    font-weight: 600;
     font-size: 1.4rem;
     margin-bottom: 0.4rem;
     margin-top: 1.4rem;
@@ -229,7 +230,7 @@ header {
 
 div.sig {
     display: block;
-    font-family: 'Charter Regular';
+    font-family: 'IBM Plex Mono';
     font-size: 85%;
     text-align: right;
     font-variant: small-caps;
