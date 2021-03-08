@@ -10,9 +10,15 @@ I'm a senior lecturer in the Graduate Research School at Western Sydney Universi
 
 ◊h1{While you're here…}
 
+◊link["blog/test.html"]{This is a test page} - 1 March, 2021
+
+◊blockquote{This is the blockquote section of the blog post. You could call it an incipit or a blurb or a nut graph, I guess. I'm pretty sure all other Pollen stuff ◊em{will} work here… ◊link["blog/test.html"]{read more}}
+
+◊link["blog/a-literate-vimrc.html"]{A Literate Vimrc} - 28 April, 2018
+
 See the blog ◊link["https://dralexnorman.net/blog.html"]{archives} for more…
 
-A link to a ◊link["test.html"]{test page}.
+A link to a ◊link["blog/test.html"]{test page}.
 
 ◊line
 

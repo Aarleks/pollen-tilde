@@ -14,25 +14,43 @@
     font-family: 'IBM Plex Mono';
     src: url("fonts/IBMPlexMono-Regular.woff2") format('woff2'),
     url("fonts/IBMPlexMono-Regular.woff") format("woff");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'IBM Plex Mono Italic';
+    font-family: 'IBM Plex Mono';
     src: url("fonts/IBMPlexMono-Italic.woff2") format('woff2'),
     url("fonts/IBMPlexMono-Italic.woff") format("woff");
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'IBM Plex Mono Bold';
+    font-family: 'IBM Plex Mono';
     src: url("fonts/IBMPlexMono-Bold.woff2") format('woff2'),
     url("fonts/IBMPlexMono-Bold.woff") format("woff");
-    font-weight: bold;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src: url("fonts/IBMPlexSansCondensed-Medium.woff2") format('woff2'),
+    url("fonts/IBMPlexSansCondensed-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src: url("fonts/IBMPlexSansCondensed-SemiBold.woff2") format('woff2'),
+    url("fonts/IBMPlexSansCondensed-SemiBold.woff") format("woff");
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -64,6 +82,32 @@ ul {
     list-style-type: none;
 }
 
+topic {
+    display: block;
+    font-family: "IBM Plex Sans Condensed";
+    font-size: 2.3rem;
+    /*text-transform: uppercase;*/
+    font-style: normal;
+    font-variant: small-caps;
+    line-height: 1.1;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-top: 0.02em;
+    hyphens: none;
+}
+
+.subhead {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    display: block;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    margin-top: 1.4rem;
+    line-height: 1.3;
+}
+
 h1 {
     font-size: 2.5em;
     line-height: 1em;
@@ -83,6 +127,22 @@ h2 {
 
 a {
     color: #333;
+    text-decoration: none;
+}
+
+a.xref {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    hyphens: none;
+}
+
+a:after {
+    content: "°";
+    color: #933;
+}
+
+div > a:after, a.title:after, a.xref:after, a.index:after, a.socials:after {
+    content: none;
 }
 
 a:hover {
@@ -113,9 +173,11 @@ blockquote p {
 
 code {
     /*border:solid 1px #41403E;*/
-    font-size: 89%;
+    font-size: 85%;
     line-height: 1.4;
     padding: 0.1em;
+    background: #f8f8ff;
+    border-radius: 6px;
 }
 
 /* Code blocks */
@@ -170,7 +232,8 @@ div.sig {
     font-family: 'Charter Regular';
     font-size: 85%;
     text-align: right;
-    text-transform: uppercase;
+    font-variant: small-caps;
+    line-height: 1.1em;
     margin-bottom: 5em;
     margin-right: 0.5rem;
     ◊; letter-spacing: 0.1pt;
