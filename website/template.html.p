@@ -13,17 +13,17 @@
   </head>
   <body>
           <nav id="TOC" role="doc-toc">
-                  <h1 class="title"><a href=https://dralexnorman.net>~acn</a></h1>
+                  <h1 class="title"><a href=https://alexnorman.xyz class="title">~acn</a></h1>
                   <a href="#" class=index>About</a>
                   <a href="#" class=index>Teaching</a>
                   <a href="#" class=index>Research</a>
                   <a href="#" class=index>Blog</a>
                   <a href="resources.html" class=index>Resources</a><br>
-                  <a href="mailto:A.Norman@westernsydney.edu.au"><i class="fas fa-paper-plane big-icon" id="icon"></i></a>
-                  <a href="https://scholar.google.com/citations?user=FN3ytOYAAAAJ&amp;hl=en"><i  class="ai ai-google-scholar big-icon" id="icon"></i></a>
-                  <a href="https://github.com/aarleks"><i class="fab fa-github big-icon" id="icon"></i></a>
-                  <a href="https://twitter.com/aarleks"><i class="fab fa-twitter big-icon" id="icon"></i></a>
-                  <a href="https://www.youtube.com/channel/UCEP8VU6BwezS99VzHNF8wSw/videos"><i class="fab fa-youtube big-icon" id="icon"></i></a>
+                  <a href="mailto:A.Norman@westernsydney.edu.au" class="socials"><i class="fas fa-paper-plane big-icon" id="icon"></i></a>
+                  <a href="https://scholar.google.com/citations?user=FN3ytOYAAAAJ&amp;hl=en" class="socials"><i  class="ai ai-google-scholar big-icon" id="icon"></i></a>
+                  <a href="https://github.com/aarleks" class="socials"><i class="fab fa-github big-icon" id="icon"></i></a>
+                  <a href="https://twitter.com/aarleks" class="socials"><i class="fab fa-twitter big-icon" id="icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UCEP8VU6BwezS99VzHNF8wSw/videos" class="socials"><i class="fab fa-youtube big-icon" id="icon"></i></a>
           </nav>
           <section id="content" class="main">
           ◊(->html doc)

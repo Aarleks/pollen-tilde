@@ -2,6 +2,7 @@
 
 ◊topic{An Attempt at a Literate vimrc File}
 
+
 In which, for no good reason, I make my .vimrc file into a markdown-based blogpost that vim reads upon startup.
 
 ◊blockquote{◊em{Edit:} a few months after writing this post I moved away from using literate programming for my ◊in-line{vimrc} file. It was a fun experiment. (AN, Mar 2021)}

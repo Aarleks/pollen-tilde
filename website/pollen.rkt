@@ -4,18 +4,22 @@
 	 racket/base
 	 racket/file
 	 racket/date
+	 racket/match
          pollen/template
 	 pollen/tag
 	 pollen/decode
 	 pollen/core
+	 pollen/cache
+	 pollen/file
+	 pollen/pagetree
 	 txexpr)
 
 (provide ->html (all-defined-out))
 
 (define (root . elements)
   (txexpr 'root empty (decode-elements elements
-			#:txexpr-elements-proc decode-paragraphs
-			#:string-proc (compose1 smart-quotes smart-dashes))))
+    #:txexpr-elements-proc decode-paragraphs
+    #:string-proc (compose1 smart-quotes smart-dashes))))
 
 ; codeblock
 (define (highlight lang . xs)
@@ -64,6 +68,25 @@
 
 (define (blockquote . text)
   `(blockquote ,@text))
+
+
+(define (blog-link post)
+  (define (post-title p)
+    (match (get-source p)
+      [(? path? src) (car (select-from-doc 'topic src))]
+      [_ `(symbol->string p)]))
+
+  (define post-link
+    (map (λ (p) `(a [[href ,(format "/~a" p)]] ,(post-title p)))
+	 (children post "index.ptree")))
+  (define (post-date
+    (map (λ (p) `()))
+	 (children post "index.ptree")))
+    `(ul [[class "blogs"]] ,@post-link ,@post-date))
+
+
+;(define (post-date post)
+
 
 ;(define (blog-list)
   ;pull a list of the 11 latest blog posts

@@ -16,9 +16,12 @@ I'm a senior lecturer in the Graduate Research School at Western Sydney Universi
 
 ◊link["blog/a-literate-vimrc.html"]{A Literate Vimrc} - 28 April, 2018
 
-See the blog ◊link["https://dralexnorman.net/blog.html"]{archives} for more…
+See the blog ◊link["https://alexnorman.xyz/blog.html"]{archives} for more…
 
 A link to a ◊link["blog/test.html"]{test page}.
+
+A test of stuff:
+◊blog-link['blog-list]
 
 ◊line
 
