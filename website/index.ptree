@@ -2,6 +2,10 @@
 
 index.html
 
+◊last-note{
+    blog/blastula-for-emailing-feedback.html
+}
+
 ◊blog-list{
     blog/a-literate-vimrc.html
     blog/test.html

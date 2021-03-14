@@ -14,7 +14,9 @@ I'm a senior lecturer in the Graduate Research School at Western Sydney Universi
 
 ◊blockquote{This is the blockquote section of the blog post. You could call it an incipit or a blurb or a nut graph, I guess. I'm pretty sure all other Pollen stuff ◊em{will} work here… ◊link["blog/test.html"]{read more}}
 
-◊subhead{# Archives}
+◊notes-list['last-note]
+◊note-blurb['last-note]
+
 ◊notes-list['blog-list]
 
 ◊line

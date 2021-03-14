@@ -69,7 +69,7 @@
 (define (blockquote . text)
   `(blockquote ,@text))
 
-
+; Make a list of posts from sublist in the index.ptree file
 (define (notes-list post)
   ; get the title of the note
   (define (note-title p)
@@ -84,8 +84,51 @@
   ; map over each note in the section and make a hyperlink
   ; to it and the publication date
   (define note-link
-    (map (λ (p) `(p (a [[href ,(format "/~a" p) ] [class "xref"]] ,(note-title p)) " - " ,(note-date p)))
+    (map (λ (p) `(p (a [[href ,(format "/~a" p) ] [class "notes"]] ,(note-title p)) " - " ,(note-date p)))
 	 (children post "index.ptree")))
-
+  ; print it out in the doc
   `(p ,@note-link))
 
+(define (note-blurb post)
+;  `(p (select-from-metas 'incipit post)))
+;(define (latest-note post)
+  (let* ((blurb (select-from-metas 'incipit post))
+;	 (linky-txt
+;          (if linky
+;	    `(@ ,linky))
+;                    "")
+	 (blurb-txt
+	   (if blurb
+	     `(@ ,blurb) ""))
+	 )
+    `(@ ,blurb-txt)
+    )
+)
+
+;(define (make-t-summary metas doc output-path )
+;  (let* ((title     (select-from-metas 'title metas))
+;         (published (select-from-metas 'published metas))
+;         (post      (path->string output-path))
+;         (blurb (select-from-metas 'blurb metas))
+;         (author (select-from-metas 'author metas))
+;         (author-txt (if author `(@," • " ,author) ""))
+;         (meta-txt
+;          `(p ((style "font-family: var(--sans-font); font-variant: small-caps; text-transform: lowercase; font-weight: 500; margin: 1ex 0 1.5ex 0;"))
+;              (@ ,published ,author-txt )
+;           )
+;         )
+;         (blurb-txt
+;          (if blurb `(@ ,blurb) "")
+;         )
+;         (title-txt
+;          (if title `(h1 ,(link post title))
+;                    "")))
+;
+;    `(@ (li (div
+;        (@ ,title-txt
+;          ,meta-txt
+;          ,blurb-txt)))
+;        ;;; (hr [(class "pub-list-div")])
+;        )
+;  ))
+;

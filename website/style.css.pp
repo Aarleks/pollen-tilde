@@ -1,9 +1,5 @@
 #lang pollen/pre
 
-◊(define LINEHEIGHT 1.4)
-
-◊(define lineheight (string-append (number->string LINEHEIGHT) "rem"))
-
 ◊(define (x-lineheight multiple)
 (string-append (real->decimal-string (* LINEHEIGHT multiple) 2) "rem"))
 
@@ -67,7 +63,7 @@ html, body {
     max-width: 1000px;
     margin: auto;
     text-align: left;
-    line-height: 1.4em;
+    line-height: 1.4;
     font-family: 'IBM Plex Mono';/*, menlo, monospace;*/
     font-size: 1.15rem;
     height: 100%;
@@ -110,25 +106,31 @@ topic {
 }
 
 h1 {
-    font-size: 2.5em;
-    line-height: 1em;
+    font-size: 3rem;
+    line-height: 1;
     text-decoration: underline;
 }
 
 h1.title {
-    font-size: 3.7em;
-    line-height: 1em;
+    font-size: 4rem;
+    font-family: ;
+    line-height: 1;
 
 }
 
 h2 {
-    line-height: 1em;
+    line-height: 1;
     text-decoration: underline;
 }
 
 a {
     color: #333;
     text-decoration: none;
+}
+
+a.notes {
+    text-decoration: underline;
+    color: #333;
 }
 
 a.xref {
@@ -142,7 +144,7 @@ a:after {
     color: #933;
 }
 
-div > a:after, a.title:after, a.xref:after, a.index:after, a.socials:after {
+div > a:after, a.notes:after, a.title:after, a.xref:after, a.index:after, a.socials:after {
     content: none;
 }
 
@@ -193,8 +195,8 @@ pre {
 }
 
 header {
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 1.5rem;
+    line-height: 1.4;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding-left: 0.5rem;
@@ -213,7 +215,7 @@ header {
 
 #icon {
     text-decoration:none;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
 #icon:hover {
@@ -223,7 +225,7 @@ header {
 .index {
     padding: 6px 8px 6px 20px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: #818181;
     display: block;
 }
@@ -234,7 +236,7 @@ div.sig {
     font-size: 85%;
     text-align: right;
     font-variant: small-caps;
-    line-height: 1.1em;
+    line-height: 1.1;
     margin-bottom: 5em;
     margin-right: 0.5rem;
     ◊; letter-spacing: 0.1pt;
