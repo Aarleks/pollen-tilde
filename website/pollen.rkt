@@ -70,36 +70,22 @@
   `(blockquote ,@text))
 
 
-(define (blog-link post)
-  (define (post-title p)
+(define (notes-list post)
+  ; get the title of the note
+  (define (note-title p)
     (match (get-source p)
       [(? path? src) (car (select-from-doc 'topic src))]
       [_ `(symbol->string p)]))
-
-  (define post-link
-    (map (λ (p) `(a [[href ,(format "/~a" p)]] ,(post-title p)))
+  ; get the date of the note
+  (define (note-date p)
+    (match (get-source p)
+      [(? path? src) (car (select-from-doc 'post-date src))]
+      [_ `(sybmol->string p)]))
+  ; map over each note in the section and make a hyperlink
+  ; to it and the publication date
+  (define note-link
+    (map (λ (p) `(p (a [[href ,(format "/~a" p) ] [class "xref"]] ,(note-title p)) " - " ,(note-date p)))
 	 (children post "index.ptree")))
-  (define (post-date
-    (map (λ (p) `()))
-	 (children post "index.ptree")))
-    `(ul [[class "blogs"]] ,@post-link ,@post-date))
 
+  `(p ,@note-link))
 
-;(define (post-date post)
-
-
-;(define (blog-list)
-  ;pull a list of the 11 latest blog posts
-  ;  with title, published date, blurb, and link
-;  )
-
-;(define (latest-post single-meta)
-  ;print link with title as text - print published date
-  ;print blurb paragraph as blockquote - end with elipsis and link to post with 'read more'
-  ;print blank line
-;  )
-
-;(define (post-list metas-list)
-  ; print link with title as text - print published date
-  ; print blank line
-;)
