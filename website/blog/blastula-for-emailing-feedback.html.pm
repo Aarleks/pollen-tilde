@@ -3,9 +3,9 @@
 ◊topic{Using R to Send Feedback to Students}
 ◊post-date{April 22, 2020}
 
-◊(define-meta incipit "An important part of teaching is sending feedback to students about their work. Outlook doesn’t make this easy - sending a different attachment to each student is hard. The ◊in-line{◊link["https://github.com/rstudio/blastula"]{blastula}} package for R provides a handy and easy-to-use tool with which to send feedback documents to students…")
+◊(define-meta incipit (@ "An important part of teaching is sending feedback to students about their work. Outlook doesn’t make this easy - sending a different attachment to each student is hard. The blastula package for R provides a handy and easy-to-use tool with which to send feedback documents to students…"))
 
-An important part of working with students on their assessment tasks is feedback. Students need detailed, specific comment on their work for the purposes of learning and self-improvement. While learning management systems serve this function, they tend to be clunky, anonymous, and unfriendly. Frequently, I need to send a document with written feedback and an annotated copy of the submission, and email is a good, simple tool for that.
+◊incipit{An important part of working with students on their assessment tasks is feedback. Students need detailed, specific comment on their work for the purposes of learning and self-improvement. While learning management systems serve this function, they tend to be clunky, anonymous, and unfriendly}. Frequently, I need to send a document with written feedback and an annotated copy of the submission, and email is a good, simple tool for that.
 
 Unfortunately, email clients like Outlook and even `mutt` don't make this easy at scale. Unless you want to do it manually, sending a different attachment to each of 80 students is hard and time-consuming.
 

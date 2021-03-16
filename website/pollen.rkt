@@ -80,7 +80,7 @@
   (define (note-date p)
     (match (get-source p)
       [(? path? src) (car (select-from-doc 'post-date src))]
-      [_ `(sybmol->string p)]))
+      [_ `(symbol->string p)]))
   ; map over each note in the section and make a hyperlink
   ; to it and the publication date
   (define note-link
@@ -89,21 +89,37 @@
   ; print it out in the doc
   `(p ,@note-link))
 
-(define (note-blurb post)
-;  `(p (select-from-metas 'incipit post)))
-;(define (latest-note post)
-  (let* ((blurb (select-from-metas 'incipit post))
-;	 (linky-txt
-;          (if linky
-;	    `(@ ,linky))
-;                    "")
-	 (blurb-txt
-	   (if blurb
-	     `(@ ,blurb) ""))
-	 )
-    `(@ ,blurb-txt)
-    )
-)
+(define (first-note post)
+  ; get the note incipit of the note
+  (define (note-incipit p)
+    (match (get-source p)
+      [(? path? src) (car (select-from-doc 'incipit src))]
+      [_ `(symbol->string p)]))
+  ; get the title of the note
+  (define (note-title p)
+    (match (get-source p)
+      [(? path? src) (car (select-from-doc 'topic src))]
+      [_ `(symbol->string p)]))
+
+  (define note-blurb
+    (map (λ (p) `(blockquote ,(note-incipit p) "… " (a [[href ,(note-title p) ] [class "notes"]] "read more")))
+	 (children post "index.ptree")))
+  ; print it out in the doc
+  `(p ,(notes-list post)
+      ,@note-blurb)
+  )
+
+;(define (note-blurb post)
+;  (let* ((path (children post "index.ptree"))
+;	 (path-string (format "~a" path))
+;	 (blurb (select-from-metas 'incipit ,@(path)))
+;	 (blurb-txt
+;	   (if blurb
+;	     `(@ ,blurb) ""))
+;	 )
+;    `(blockquote ,blurb-txt)
+;    )
+;)
 
 ;(define (make-t-summary metas doc output-path )
 ;  (let* ((title     (select-from-metas 'title metas))

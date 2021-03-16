@@ -52,6 +52,15 @@
 }
 
 @font-face {
+    font-family: concourse-t3-index;
+    src: url("fonts/Concourse-T3-Index.otf") format('otf'),
+    url("fonts/Concourse-T3-Index.ttf") format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
     font-family: 'Charter Regular';
     src: url("fonts/charter_regular.woff2") format('woff2');
     font-weight: normal;
@@ -152,6 +161,27 @@ a:hover {
     background: #fbf3f3;
     border-radius: 6px;
     transition-duration: 0.3s;
+}
+
+ol {
+    counter-reset: foobar;
+}
+
+ol li {
+    margin-left: 2.5rem;
+    list-style: none;
+}
+
+ol li:before {
+    /*font-feature-settings: 'ss03';*/
+    /*display: inline-block;*/
+    counter-increment: foobar;
+    content: counter(foobar);
+    font-family: "concourse-t3-index";
+    /*font-family: "IBM Plex Sans Condensed";*/
+    font-size: 1.10rem;
+    position: absolute;
+    margin-left: -2.5rem;
 }
 
 h1.title:hover {

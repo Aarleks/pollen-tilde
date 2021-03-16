@@ -3,10 +3,11 @@
 index.html
 
 ◊last-note{
-    blog/blastula-for-emailing-feedback.html
+    blog/systematic-notetaking.html
 }
 
 ◊blog-list{
-    blog/a-literate-vimrc.html
+    blog/blastula-for-emailing-feedback.html
     blog/test.html
+    blog/a-literate-vimrc.html
 }

@@ -10,12 +10,7 @@ I'm a senior lecturer in the Graduate Research School at Western Sydney Universi
 
 ◊h1{While you're here…}
 
-◊link["blog/test.html"]{This is a test page} - 1 March, 2021
-
-◊blockquote{This is the blockquote section of the blog post. You could call it an incipit or a blurb or a nut graph, I guess. I'm pretty sure all other Pollen stuff ◊em{will} work here… ◊link["blog/test.html"]{read more}}
-
-◊notes-list['last-note]
-◊note-blurb['last-note]
+◊first-note['last-note]
 
 ◊notes-list['blog-list]
 
