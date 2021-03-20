@@ -13,10 +13,10 @@
   <body>
           <nav id="TOC" role="doc-toc">
                   <h1 class="title"><a href="https://alexnorman.xyz" class="title">~acn</a></h1>
-                  <a href="#" class="index">About</a>
-                  <a href="#" class="index">Teaching</a>
+                  <a href="../about.html" class="index">About</a>
+                  <a href="../notes-archive.html" class="index">Notes</a>
+                  <a href="../teaching.html" class="index">Teaching</a>
                   <a href="#" class="index">Research</a>
-                  <a href="#" class="index">Blog</a>
                   <a href="resources.html" class=index>Resources</a><br>
                   <a href="mailto:A.Norman@westernsydney.edu.au" class="socials"><i class="fas fa-paper-plane big-icon" id="icon"></i></a>
                   <a href="https://scholar.google.com/citations?user=FN3ytOYAAAAJ&amp;hl=en" class="socials"><i  class="ai ai-google-scholar big-icon" id="icon"></i></a>

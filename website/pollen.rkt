@@ -71,20 +71,10 @@
 
 ; Make a list of posts from sublist in the index.ptree file
 (define (notes-list post)
-  ; get the title of the note
-  (define (note-title p)
-    (match (get-source p)
-      [(? path? src) (car (select-from-doc 'topic src))]
-      [_ `(symbol->string p)]))
-  ; get the date of the note
-  (define (note-date p)
-    (match (get-source p)
-      [(? path? src) (car (select-from-doc 'post-date src))]
-      [_ `(symbol->string p)]))
   ; map over each note in the section and make a hyperlink
   ; to it and the publication date
   (define note-link
-    (map (λ (p) `(p (a [[href ,(format "/~a" p) ] [class "notes"]] ,(note-title p)) " - " ,(note-date p)))
+    (map (λ (p) `(p (a [[href ,(format "/~a" p) ] [class "notes"]] ,(get-note-topic p)) " - " ,(get-note-date p)))
 	 (children post "index.ptree")))
   ; print it out in the doc
   `(p ,@note-link))
@@ -95,56 +85,22 @@
     (match (get-source p)
       [(? path? src) (car (select-from-doc 'incipit src))]
       [_ `(symbol->string p)]))
-  ; get the title of the note
-  (define (note-title p)
-    (match (get-source p)
-      [(? path? src) (car (select-from-doc 'topic src))]
-      [_ `(symbol->string p)]))
-
+  ; print the incipit as a blurb
   (define note-blurb
-    (map (λ (p) `(blockquote ,(note-incipit p) "… " (a [[href ,(note-title p) ] [class "notes"]] "read more")))
+    (map (λ (p) `(blockquote ,(note-incipit p) "… " (a [[href ,(format "/~a" p) ] [class "notes"]] "read more")))
 	 (children post "index.ptree")))
   ; print it out in the doc
   `(p ,(notes-list post)
       ,@note-blurb)
-  )
+)
 
-;(define (note-blurb post)
-;  (let* ((path (children post "index.ptree"))
-;	 (path-string (format "~a" path))
-;	 (blurb (select-from-metas 'incipit ,@(path)))
-;	 (blurb-txt
-;	   (if blurb
-;	     `(@ ,blurb) ""))
-;	 )
-;    `(blockquote ,blurb-txt)
-;    )
-;)
+(define (get-note-topic p)
+  (match (get-source p)
+    [(? path? src) (car (select-from-doc 'topic src))]
+    [_ `(symbol->string p)]))
 
-;(define (make-t-summary metas doc output-path )
-;  (let* ((title     (select-from-metas 'title metas))
-;         (published (select-from-metas 'published metas))
-;         (post      (path->string output-path))
-;         (blurb (select-from-metas 'blurb metas))
-;         (author (select-from-metas 'author metas))
-;         (author-txt (if author `(@," • " ,author) ""))
-;         (meta-txt
-;          `(p ((style "font-family: var(--sans-font); font-variant: small-caps; text-transform: lowercase; font-weight: 500; margin: 1ex 0 1.5ex 0;"))
-;              (@ ,published ,author-txt )
-;           )
-;         )
-;         (blurb-txt
-;          (if blurb `(@ ,blurb) "")
-;         )
-;         (title-txt
-;          (if title `(h1 ,(link post title))
-;                    "")))
-;
-;    `(@ (li (div
-;        (@ ,title-txt
-;          ,meta-txt
-;          ,blurb-txt)))
-;        ;;; (hr [(class "pub-list-div")])
-;        )
-;  ))
-;
+  ; get the date of the note
+(define (get-note-date p)
+  (match (get-source p)
+    [(? path? src) (car (select-from-doc 'post-date src))]
+    [_ `(symbol->string p)]))

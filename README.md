@@ -4,7 +4,10 @@ A test of [Matthew Butterick's `pollen`](https://practicaltypography.com/) langu
 
 ## Things I want to do
 
-* add an rss capability
+* add an 'About' page with link to CV page;
+* add an rss capability;
+* add a colophon page (linked from home, 404, and about)
+* a rolling blog homepage;
 * add a resources page;
 * add a teaching page;
 * make the index page a bit more purposeful;

@@ -16,7 +16,7 @@ I'm a senior lecturer in the Graduate Research School at Western Sydney Universi
 
 ◊line
 
-Made with ◊link["https://docs.racket-lang.org/pollen/"]{Pollen} using ◊link["https://neovim.io/"]{Neovim}, Make, and the Shell.
+Made with ◊link["https://docs.racket-lang.org/pollen/"]{Pollen} using ◊link["https://neovim.io/"]{Neovim}, Make, and the Shell. ◊xref["/colophon.html"]{Colophon}.
 
 ©2016-2021 Alex Norman
 

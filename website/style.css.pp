@@ -146,6 +146,7 @@ a.xref {
     text-transform: lowercase;
     font-variant: small-caps;
     hyphens: none;
+    font-style: normal;
 }
 
 a:after {

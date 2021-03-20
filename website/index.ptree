@@ -11,3 +11,11 @@ index.html
     blog/a-zettelkasten-with-vim.html
     blog/a-literate-vimrc.html
 }
+
+◊general{
+    colophon.html
+    resources.html
+    notes-archive.html
+    about.html
+    teaching.html
+}
