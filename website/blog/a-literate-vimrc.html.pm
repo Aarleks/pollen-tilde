@@ -206,5 +206,5 @@ autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c
 
 ◊sig{—Alex Norman
 Gadigal Country
-◊post-date{March 14, 2021}
+◊post-date{6 July, 2018}
 }

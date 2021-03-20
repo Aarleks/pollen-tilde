@@ -1,7 +1,6 @@
 #lang pollen
 
 ◊topic{Using R to Send Feedback to Students}
-◊post-date{April 22, 2020}
 
 ◊(define-meta incipit (@ "An important part of teaching is sending feedback to students about their work. Outlook doesn’t make this easy - sending a different attachment to each student is hard. The blastula package for R provides a handy and easy-to-use tool with which to send feedback documents to students…"))
 
@@ -138,3 +137,8 @@ This is what your students will receive:
 A simple solution to a time consuming problem.
 
 Thanks to [Richard Iannone](https://github.com/rich-iannone) and the contributors to `blastula` for a great package.
+
+◊sig{—Alex Norman
+Gadigal-Wangal Land
+◊post-date{22 April, 2020}
+}

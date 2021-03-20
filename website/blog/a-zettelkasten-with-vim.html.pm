@@ -15,6 +15,6 @@ So, I give you ◊link["https://github.com/Aarleks/zettel.vim"]{Zettel.vim}. It'
 Now I don't seem to be able to fix this fucking thing!
 
 ◊sig{—Alex Norman
-◊post-date{27 Feb, 2021}
+◊post-date{29 March, 2020}
 Gadigal-Wangal Country
 }

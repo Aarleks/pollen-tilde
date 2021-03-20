@@ -18,8 +18,7 @@ clean:
 	raco pollen reset
 
 view:
-	cd $(INPUT)
-	raco pollen start -l
+	raco pollen start -l $(INPUT)
 
 index.html: $(INPUT)/index.html.pm
 	raco pollen render -f $(INPUT)/index.html.pm
