@@ -4,12 +4,11 @@ A test of [Matthew Butterick's `pollen`](https://practicaltypography.com/) langu
 
 ## Things I want to do
 
-* make the index page a bit more purposeful;
+* add an rss capability
 * add a resources page;
 * add a teaching page;
+* make the index page a bit more purposeful;
 * add a cv page;
-* add an rss capability
-* set up a cronjob on the site to look for git commits and git pull when there is a new one
 
 ---
 

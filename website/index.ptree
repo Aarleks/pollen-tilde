@@ -8,6 +8,6 @@ index.html
 
 ◊blog-list{
     blog/blastula-for-emailing-feedback.html
-    blog/test.html
+    blog/a-zettelkasten-with-vim.html
     blog/a-literate-vimrc.html
 }
