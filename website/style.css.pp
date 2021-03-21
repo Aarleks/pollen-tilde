@@ -173,13 +173,14 @@ ol li {
     list-style: none;
 }
 
+ol.alpha {
+    list-style-type: lower-roman;
+}
+
 ol li:before {
-    /*font-feature-settings: 'ss03';*/
-    /*display: inline-block;*/
     counter-increment: foobar;
     content: counter(foobar);
-    font-family: "concourse-t3-index";
-    /*font-family: "IBM Plex Sans Condensed";*/
+    font-family: "IBM Plex Sans Condensed";
     font-size: 1.10rem;
     position: absolute;
     margin-left: -2.5rem;
