@@ -27,5 +27,16 @@
           <section id="content" class="main">
           ◊(->html doc)
           </section>
+
+<footer>
+    <div class="footer">
+    ◊(->html ◊line)
+    ◊(->html `(span (a ((href "/about.html") (class "xref")) "About")))
+    ◊(->html `(span (a ((href "/") (class "xref")) "Home")))
+    ◊(->html `(span (a ((href "/colophon.html") (class "xref")) "Colophon")))
+    </div>
+  </footer>
+</html>
+
   </body>
 </html>

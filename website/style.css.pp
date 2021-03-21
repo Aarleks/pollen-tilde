@@ -237,6 +237,10 @@ header {
     text-align: left;
 }
 
+.footer {
+    text-align: center;
+}
+
 #TOC {
     width: 250px;
     min-height: 100%;

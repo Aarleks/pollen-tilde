@@ -233,6 +233,6 @@ literature research!
 
 
 ◊sig{—Alex Norman & Jack Tsonis
-◊post-date{March 15, 2021}
+◊post-date{15 March, 2021}
 Gadigal-Wangal Land
 }
