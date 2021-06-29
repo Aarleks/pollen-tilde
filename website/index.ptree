@@ -9,8 +9,8 @@ index.html
 ◊blog-list{
     blog/blastula-for-emailing-feedback.html
     blog/a-zettelkasten-with-vim.html
-    blog/a-literate-vimrc.html
     blog/100-days-of-code.html
+    blog/a-literate-vimrc.html
 }
 
 ◊general{
