@@ -1,5 +1,7 @@
 #lang pollen
 
+◊define-meta[publish-date]{Sun, 15 March 2019 20:20:20 +1000}
+
 ◊topic{A Note on Systematic Notetaking}
 
 ◊incipit{One of the defining characteristics of academic research, across every discipline, is the review of existing literature. Generally speaking, if our written work does not demonstrate sufficient knowledge of existing literature within the appropriate field(s), it is rejected as insufficiently researched}, or at best is considered 'undercooked' and in need of significant development.

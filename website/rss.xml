@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Alex Norman</title>
+        <description>Recent stuff at alexnorman.xyz</description>
+        <language>en-au</language>
+        <link>https://alexnorman.xyz/</link>
+        <atom:link href="https://alexnorman.xyz/rss.xml" rel="self" type="application/rss+xml" />
+
+
+<item>
+<title>Using R to Send Feedback to Students</title>
+<link>https://alexnorman.xyz/blog/blastula-for-emailing-feedback.html</link>
+<pubDate>Wed, 22 April 2020 20:20:20 +1000</pubDate>
+<guid>https://alexnorman.xyz/blog/blastula-for-emailing-feedback.html</guid>
+<description><![CDATA[An important part of working with students on their assessment tasks is feedback. Students need detailed, specific comment on their work for the purposes of learning and self-improvement. While learning management systems serve this function, they tend to be clunky, anonymous, and unfriendly]]></description>
+</item><item>
+<title>A Zettelkasten with Vim</title>
+<link>https://alexnorman.xyz/blog/a-zettelkasten-with-vim.html</link>
+<pubDate>Sun, 29 March 2020 20:20:20 +1000</pubDate>
+<guid>https://alexnorman.xyz/blog/a-zettelkasten-with-vim.html</guid>
+<description><![CDATA[I’ve long struggled with categorising my notes. When I moved from paper to electronic notes I started to struggle; I felt like I needed to ‘file’ things because that’s what you did with files on a computer. You put them in folders]]></description>
+</item><item>
+<title>100 Days of Code</title>
+<link>https://alexnorman.xyz/blog/100-days-of-code.html</link>
+<pubDate>Mon, 27 May 2019 20:20:20 +1000</pubDate>
+<guid>https://alexnorman.xyz/blog/100-days-of-code.html</guid>
+<description><![CDATA[I like learning. It’s one of the reasons I stayed in tertiary education; I’m essentially a professional learner. One of my great joys of the last few years has been learning programming. But after being so busy with teaching since July 2016, I feel like it’s time to spend some time deliberately practicing and learning programming again]]></description>
+</item><item>
+<title>An Attempt at a Literate vimrc File</title>
+<link>https://alexnorman.xyz/blog/a-literate-vimrc.html</link>
+<pubDate>Fri, 06 July 2018 20:20:20 +1000</pubDate>
+<guid>https://alexnorman.xyz/blog/a-literate-vimrc.html</guid>
+<description><![CDATA[In which, for no good reason, I make my .vimrc file into a markdown-based blogpost that vim reads upon startup.]]></description>
+</item>
+
+</channel>
+</rss>

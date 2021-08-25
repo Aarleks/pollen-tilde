@@ -1,5 +1,7 @@
 #lang pollen
 
+◊define-meta[publish-date]{Mon, 27 May 2019 20:20:20 +1000}
+
 ◊topic{100 Days of Code}
 
 ◊incipit{I like learning. It's one of the reasons I stayed in tertiary education; I'm essentially a professional learner. One of my great joys of the last few years has been learning programming. But after being so busy with teaching since July 2016, I feel like it's time to spend some time deliberately practicing and learning programming again}.

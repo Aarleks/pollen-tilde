@@ -80,11 +80,6 @@
   `(p ,@note-link))
 
 (define (first-note post)
-  ; get the note incipit of the note
-  (define (note-incipit p)
-    (match (get-source p)
-      [(? path? src) (car (select-from-doc 'incipit src))]
-      [_ `(symbol->string p)]))
   ; print the incipit as a blurb
   (define note-blurb
     (map (λ (p) `(blockquote ,(note-incipit p) "… " (a [[href ,(format "/~a" p) ] [class "notes"]] "read more")))
@@ -93,6 +88,12 @@
   `(p ,(notes-list post)
       ,@note-blurb)
 )
+
+; get the note incipit of the note
+(define (note-incipit p)
+  (match (get-source p)
+    [(? path? src) (car (select-from-doc 'incipit src))]
+    [_ `(symbol->string p)]))
 
 (define (get-note-topic p)
   (match (get-source p)
@@ -104,3 +105,29 @@
   (match (get-source p)
     [(? path? src) (car (select-from-doc 'post-date src))]
     [_ `(symbol->string p)]))
+
+; Get the meta 'publish-date' from a post
+(define (rss-date p)
+  (select-from-metas 'publish-date p))
+
+; Make an rss feed from sublist in the index.ptree file
+(define (post-list post)
+  ; map over each note in the section and make a hyperlink
+  ; to it and the publication date
+  ; get title = get-note-topic
+  ; get link =
+  ; get date = get-note-date
+  ; get description
+  (define rss-list
+    (map (λ (p) `(item
+		    "\n"(title ,(get-note-topic p))
+		    "\n"(link ,(format "https://alexnorman.xyz/~a" p))
+		    "\n"(pubDate ,(rss-date p))
+		    "\n"(guid ,(format "https://alexnorman.xyz/~a" p))
+		    "\n"(description ,(format "<![CDATA[~a]]>" (note-incipit p)))
+		    "\n"))
+	   ;(a [[href ,(format "/~a" p) ] [class "notes"]] ,(get-note-topic p)) " - " ,(get-note-date p)))
+	 (children post "index.ptree")))
+  ; print it out in the doc
+  `(,@rss-list))
+

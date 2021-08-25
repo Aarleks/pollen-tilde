@@ -1,9 +1,11 @@
 #lang pollen
 
+◊define-meta[publish-date]{Fri, 06 July 2018 20:20:20 +1000}
+
 ◊topic{An Attempt at a Literate vimrc File}
 
 
-In which, for no good reason, I make my .vimrc file into a markdown-based blogpost that vim reads upon startup.
+◊incipit{In which, for no good reason, I make my .vimrc file into a markdown-based blogpost that vim reads upon startup.}
 
 ◊blockquote{◊em{Edit:} a few months after writing this post I moved away from using literate programming for my ◊in-line{vimrc} file. It was a fun experiment. (AN, Mar 2021)}
 

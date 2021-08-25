@@ -1,5 +1,7 @@
 #lang pollen
 
+◊define-meta[publish-date]{Sun, 29 March 2020 20:20:20 +1000}
+
 ◊topic{A Zettelkasten with Vim}
 
 ◊incipit{I've long struggled with categorising my notes. When I moved from paper to electronic notes I started to struggle; I felt like I needed to 'file' things because that's what you did with files on a computer. You put them in folders}.

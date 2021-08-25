@@ -1,5 +1,7 @@
 #lang pollen
 
+◊define-meta[publish-date]{Wed, 22 April 2020 20:20:20 +1000}
+
 ◊topic{Using R to Send Feedback to Students}
 
 ◊incipit{An important part of working with students on their assessment tasks is feedback. Students need detailed, specific comment on their work for the purposes of learning and self-improvement. While learning management systems serve this function, they tend to be clunky, anonymous, and unfriendly}. Frequently, I need to send a document with written feedback and an annotated copy of the submission, and email is a good, simple tool for that.
