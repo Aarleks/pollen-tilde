@@ -191,9 +191,14 @@ h1.title:hover {
 }
 
 img {
-    max-width: 500px;
     max-width: 100%;
-    max-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    font-size:0.8rem;
+    margin-top: 0.25rem;
 }
 
 blockquote {

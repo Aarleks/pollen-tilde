@@ -37,6 +37,13 @@
 (define (xref url . elements)
   `(a ((href ,url) (class "xref")) ,@elements))
 
+; image link
+(define (img #:src src . caption)
+  `(figure
+    (img ([src ,src]))
+    (figcaption ,@caption)
+    ))
+
 ; heading styles
 (define (topic . text)
   `(topic ,@text))
