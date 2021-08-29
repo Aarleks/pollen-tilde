@@ -11,7 +11,9 @@
 	<atom:link href="https://alexnorman.xyz/rss.xml" rel="self" type="application/rss+xml" />
 
 
-◊(->html (post-list 'blog-list))
+◊(->html
+    (post-list 'blog-list)
+    )
 
 </channel>
 </rss>
