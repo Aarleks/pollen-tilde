@@ -8,52 +8,47 @@
 
 @font-face {
     font-family: 'IBM Plex Mono';
-    src: url("fonts/IBMPlexMono-Regular.woff2") format('woff2'),
+    src: local("IBM Plex Mono"), url("fonts/IBMPlexMono-Regular.woff2") format('woff2'),
     url("fonts/IBMPlexMono-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'IBM Plex Mono';
-    src: url("fonts/IBMPlexMono-Italic.woff2") format('woff2'),
+    src: local("IBM Plex Mono"), url("fonts/IBMPlexMono-Italic.woff2") format('woff2'),
     url("fonts/IBMPlexMono-Italic.woff") format("woff");
     font-weight: 400;
     font-style: italic;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'IBM Plex Mono';
-    src: url("fonts/IBMPlexMono-Bold.woff2") format('woff2'),
+    src: local("IBM Plex Mono"), url("fonts/IBMPlexMono-Bold.woff2") format('woff2'),
     url("fonts/IBMPlexMono-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'IBM Plex Sans Condensed';
-    src: url("fonts/IBMPlexSansCondensed-Medium.woff2") format('woff2'),
+    src: local("IBM Plex Sans Condensed"), url("fonts/IBMPlexSansCondensed-Medium.woff2") format('woff2'),
     url("fonts/IBMPlexSansCondensed-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'IBM Plex Sans Condensed';
-    src: url("fonts/IBMPlexSansCondensed-SemiBold.woff2") format('woff2'),
+    src: local("IBM Plex Sans Condensed"), url("fonts/IBMPlexSansCondensed-SemiBold.woff2") format('woff2'),
     url("fonts/IBMPlexSansCondensed-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: concourse-t3-index;
-    src: url("fonts/Concourse-T3-Index.otf") format('otf'),
+    src: local("contourse-t3-index"), url("fonts/Concourse-T3-Index.otf") format('otf'),
     url("fonts/Concourse-T3-Index.ttf") format('ttf');
     font-weight: normal;
     font-style: normal;
@@ -62,10 +57,9 @@
 
 @font-face {
     font-family: 'Charter Regular';
-    src: url("fonts/charter_regular.woff2") format('woff2');
+    src: local("Charter Regular"), url("fonts/charter_regular.woff2") format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 html, body {
@@ -220,16 +214,16 @@ code {
     border-radius: 6px;
 }
 
-/* Code blocks */
+/* Code blocks
 pre {
-    padding: 0.5em; /* Since we have a background color */
-    border-radius: 5px; /* Softens it */
+    padding: 0.5em; /* Since we have a background color
+    border-radius: 5px; /* Softens it
     background-color: #F4F4F4;
     border: 1px solid #aaa;
     margin-left:  0.5em;
     margin-right: 0.5em;
     line-height: 1.1;
-}
+} */
 
 header {
     font-size: 1.5rem;

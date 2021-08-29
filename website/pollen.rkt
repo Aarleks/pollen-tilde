@@ -12,9 +12,11 @@
 	 pollen/cache
 	 pollen/file
 	 pollen/pagetree
+	 pollen/unstable/pygments
 	 txexpr)
 
 (provide ->html (all-defined-out))
+(provide (all-defined-out) highlight)
 
 (define (root . elements)
   (txexpr 'root empty (decode-elements elements
@@ -22,8 +24,8 @@
     #:string-proc (compose1 smart-quotes smart-dashes))))
 
 ; codeblock
-(define (highlight lang . xs)
-  `(pre (code ((class ,(format "~a" lang))) ,@xs)))
+;(define (highlight lang . xs)
+;  `(pre (code [[class ,(format "language-~a" lang)]] ,@xs)))
 
 ; in-line code
 (define (in-line . text)

@@ -32,7 +32,7 @@ The bulk of my work in Vim is writing prose, mainly academic articles and blogpo
 
 First of all we want to set Vim up so that it behaves nicely and loads the plugins we have put into our autoload folder. To begin, call Pathogen, which will load up plugins. After that, we set some basics that will make Vim behave nicely. Vim's default mode won't allow many plugins to work, so setting ◊in-line{nocompatible} makes Vim behave like a modern program. After this, we get Vim to recognise and format text according to the type of file, and the turn on relative line numbers. Finally, sensible linebreaks and a deafult to split buffers to the right.
 
-◊highlight["vimrc"]{
+◊highlight['vim]{
 let mapleader = ","
 execute pathogen#infect()
 execute pathogen#helptags()
@@ -76,34 +76,34 @@ set splitright
 
 The following are also pretty handy for auto-completion.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 set wildmode=longest,list,full
 set wildmenu
 }
 
-◊highlight["vim"]{
+◊highlight['vim]{
 autocmd BufWritePre * %s/\s\+$//e
 }
 
 When system shortcut files are updated, renew bash and ranger configs with new material.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 autocmd BufWritePost ~/.scripts/folders,~/.scripts/configs !bash ~/.scripts/shortcuts.sh
 }
 
 By default, Vim comments out new lines. This command stops that.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 }
 
 ◊subhead{Navigation with guides}
 
-This took me *ages* to figure out. I kept seeing ◊in-line{<++>} in a some files and couldn't figure out what they were for. Yet again, Luke Smith's guidance helped. They are just markers one can leave in order to indicate ◊in-line{'put some text here'}. Handy!
+This took me ◊em{ages} to figure out. I kept seeing ◊in-line{<++>} in files and couldn't figure out what they were for. Yet again, Luke Smith's guidance helped. They are just arbitrary text markers one can leave in order to indicate ◊in-line{'put some text here'}. Handy!
 
 These commands allow you to jump to the next 'guide', delete it, and throw you into ◊in-line{Insert} mode.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 map <Space><Tab> <Esc>/<++><Enter>"_c4l
@@ -117,7 +117,7 @@ File navigation is one of the greatest things about Vim. It's easy to go to the 
 
 Firstly, navigation between split windows. The default keymapping to go to the split to the right is ◊in-line{<C-w>l}. Too many keystrokes - let's get rid of the ◊in-line{w}.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -126,7 +126,7 @@ map <C-l> <C-w>l
 
 This is a handy one - replace all while in Normal Mode with minimal effort! Simply add the search text between the slashes and the replacement text in place of the ◊in-line{g}.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 nnoremap S :%s//g<Left><Left>
 }
 
@@ -136,23 +136,23 @@ map <F6> :setlocal spell! spelllang=en_gb<CR>
 }
 
 Get line, word and character counts with F3.
-◊highlight["vim"]{
+◊highlight['vim]{
 map <F3> :!wc <C-R>%<CR>
 }
 
 Open my bibliography file in split
-◊highlight["vim"]{
+◊highlight['vim]{
 map <F9> :vsp<space>~/Dropbox/WritingTools/zotero-library.bib<CR>
 }
 
 Use the ◊in-line{urlview} script to choose and open a url.
-◊highlight["vim"]{
+◊highlight['vim]{
 :noremap <leader>u :w<Home>silent <End> !urlview<CR>
 }
 
 This command executes the script ◊in-line{compiler} that is adapted from Luke Smith's file of the same name, and that ships with his LARBS setup. The script builds a pdf with default settings using ◊in-line{pandoc}.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 map <leader>c :!compiler <c-r>%<CR>
 }
 
@@ -162,7 +162,7 @@ Whether writing code or prose, it's often nice to have a clean writing environme
 
 I use Goyo for this purpose in Vim. The following command maps F10 to be a Goyo toggle. I may also put Limelight in here, too, as it seems pretty cool.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 map <F10> :Goyo<CR>
 map <leader>f :Goyo<CR>
 inoremap <F10> <esc>:Goyo<CR>a
@@ -172,13 +172,13 @@ inoremap <F10> <esc>:Goyo<CR>a
 
 I usually write in Markdown or RMarkdown for blog posts and articles/chapters/etc., so first we'll setup Vim to interpret relevant files as ◊in-line{markdown}. This command tells Vim to interpret a bunch of different filetypes as Markdown files, which makes navigation and keymappings work the same way.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 }
 
 Almost all of my Vim work is in Markdown. These keymappings make life a little easier. First of all there is navigation with `j` and `k` when in `Normal` mode so that you can more intuitively go through the lines of a paragraph, rather than logical lines. Secondly, there are a bunch of shortcuts to create things like **bold**, *italics*, ~~strikethrough~~, `code chunks` (including blocks for R and Python), new sections, horizontal lines, web links, image links, and four levels of headings.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 autocmd Filetype markdown,rmd map j gj
 autocmd Filetype markdown,rmd map k gk
 autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
@@ -201,7 +201,7 @@ autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 
 These two commands map ◊in-line{F5} to a command to create a pdf, in Markdown via pandoc, and in RMarkdown via R.
 
-◊highlight["vim"]{
+◊highlight['vim]{
 autocmd Filetype markdown map <F5> :!pandoc<space><C-r>%<space>--pdf-engine=xelatex<space>-o<space><C-r>%.pdf<Enter><Enter>
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 }

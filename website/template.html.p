@@ -5,13 +5,11 @@
     <meta name="author" content="Alex Norman" />
     <title>~acn</title>
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="styles/solarized-dark.css">
+    <link rel="stylesheet" href="styles/pygments.css">
 
-<script src="highlight.pack.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
+
           <nav id="TOC" role="doc-toc">
                   <h1 class="title"><a href=https://alexnorman.xyz class="title">~acn</a></h1>
                   <a href="/about.html" class=index>About</a>

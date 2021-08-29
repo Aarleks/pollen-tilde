@@ -5,9 +5,7 @@
     <meta name="author" content="Alex Norman" />
     <title>~acn</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../styles/nord.css">
-    <script src="../highlight.pack.js"></script>
-    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="../styles/pygments.css">
 
   </head>
   <body>

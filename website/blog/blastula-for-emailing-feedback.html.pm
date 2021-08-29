@@ -23,29 +23,29 @@ What we are doing is taking a folder with a feedback document for each student a
 
 First we want to get our packages ready and set all our variables:
 
-◊highlight["r"]{
+◊highlight['r]{
 
 library(blastula)
 library(dplyr)
 library(readr)
 
 # Read the class enrolment data
-class_names <- readr::read_csv("class-data.csv")
+class_names <- readr::read_csv('class-data.csv')
 
 # Prepare variables for email content
-subject <- "Course Assessment Feedback"
-from <- "your_email@heapsgoodeducation.edu"
+subject <- 'Course Assessment Feedback'
+from <- 'your_email@heapsgoodeducation.edu'
 
 # Get the appropriate filenames
-feedback_files <- list.files("/path/to/feedback_files/", full.names = TRUE)
+feedback_files <- list.files('/path/to/feedback_files/', full.names = TRUE)
 
 # Get a nicely formatted date/time string: e.g. 'Mon, 27 Apr at 20:10'
-current_date_time <- format(Sys.time(), "%a, %d %b at %H:%M")
+current_date_time <- format(Sys.time(), '%a, %d %b at %H:%M')
 }
 
 Next we want to get our email text, with a placeholder for the recipient's name. To do this we can either create a markdown document and read it in, or simply create a character object in ◊in-line{R} with markdown formatting. Here I've done the latter (remember in markdown two new lines is a paragraph break).
 
-◊highlight["r"]{
+◊highlight['r]{
 
 # Generate the body text for the email message
 email_text <- "Dear StudentName,
@@ -70,7 +70,7 @@ With all of that setup, we can now bring ◊in-line{blastula} in to send each st
 
 First we get our email login credentials sorted. For this we use one the functions that ships with `blastula`. In this example I'm using Office365 (because that's what I use at work) but there are options for Gmail and Outlook, too (note: this will ask you for your password and will store it in your working directory in a plain-text file; best to delete it when you're done). You might need to play around for a bit to find the correct settings for your email.
 
-◊highlight["r"]{
+◊highlight['r]{
 
 # Create a credentials file
 create_smtp_creds_file(
@@ -84,12 +84,15 @@ create_smtp_creds_file(
 
 And finally we simply loop through our class list, sending each student an email with their individual feedback files attached:
 
-◊highlight["r"]{
+◊highlight['r]{
 
 # Loop through eligible recipients and send an email using blastula package
 for(i in 1:length(class_names$Surname)){
   name <- class_names$First_Name[i]
-  recipient <- paste(class_names$studentID[i], "@student.heapsgoodeducation.edu", sep = "")
+  recipient <- paste(
+    class_names$studentID[i],
+    "@student.heapsgoodeducation.edu",
+    sep = "")
 
   # Find the files that match the Surname
   # (having a filenaming protocol for feedback files is vital!
@@ -107,10 +110,9 @@ for(i in 1:length(class_names$Surname)){
     compose_email(
       body = md(msg),
       header = "Cool Assessment Feedback",
-      footer =
-        md(c(
-	   "Email made in and sent from `R`, using the awesome `blastula` package, on ",
-	   current_date_time))
+      footer = md(
+	c("Email sent from `R` using the `blastula` package, on ",
+	current_date_time))
     )
 
   # Attach feedback files to the email object
