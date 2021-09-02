@@ -1,15 +1,14 @@
 # Tilde Pollen
 
-A test of [Matthew Butterick's `pollen`](https://practicaltypography.com/) language for document production.
+My website build using [Matthew Butterick's `pollen`](https://practicaltypography.com/) language for document production.
 
-## Things I want to do
+## TODO
 
-* add a resources page;
-* add a teaching page;
+* add RSS feed button
+* fix 404 page css issue
+* fix RSS function for latest post
+* develop the resources page;
+* develop the teaching page;
 * add a cv page;
 
 ---
-
-## Website Build Script
-
-A makefile that makes.
