@@ -21,6 +21,7 @@
                   <a href="https://github.com/aarleks" class="socials"><i class="fab fa-github big-icon" id="icon"></i></a>
                   <a href="https://twitter.com/aarleks" class="socials"><i class="fab fa-twitter big-icon" id="icon"></i></a>
                   <a href="https://www.youtube.com/channel/UCEP8VU6BwezS99VzHNF8wSw/videos" class="socials"><i class="fab fa-youtube big-icon" id="icon"></i></a>
+                  <a href="https://alexnorman.xyz/feed.atom" class="socials"><i class="fab fa-rss big-icon" id="icon"></i></a>
           </nav>
           <section id="content" class="main">
           ◊(->html doc)

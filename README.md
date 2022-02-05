@@ -4,7 +4,6 @@ My website build using [Matthew Butterick's `pollen`](https://practicaltypograph
 
 ## TODO
 
-* add RSS feed button
 * fix 404 page css issue
 * add a 'last updated' unique to each page
     * going from git: `git log -n1 --pretty=format%cD -- <file>`
