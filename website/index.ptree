@@ -2,24 +2,12 @@
 
 index.html
 
-◊last-note{
-    blog/systematic-notetaking.html
-}
-
 ◊blog-list{
+    blog/systematic-notetaking.html
     blog/blastula-for-emailing-feedback.html
     blog/a-zettelkasten-with-vim.html
     blog/100-days-of-code.html
     blog/a-literate-vimrc.html
 }
 
-◊general{
-    colophon.html
-    resources.html
-    notes-archive.html
-    about.html
-    teaching.html
-    research.html
-    404.html
-}
 

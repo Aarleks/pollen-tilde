@@ -10,7 +10,7 @@ I'm a senior lecturer in the Graduate Research School at Western Sydney Universi
 
 ◊h1{While you're here…}
 
-◊first-note['last-note]
+◊first-note['blog-list]
 
 ◊notes-list['blog-list]
 
@@ -18,6 +18,6 @@ I'm a senior lecturer in the Graduate Research School at Western Sydney Universi
 
 Made with ◊link["https://docs.racket-lang.org/pollen/"]{Pollen} using ◊link["https://neovim.io/"]{Neovim}, Make, and the Shell. ◊xref["/colophon.html"]{Colophon}.
 
-©2016-2021 Alex Norman
+©2016-2022 Alex Norman
 
 Latest update on ◊(date-string)

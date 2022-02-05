@@ -4,6 +4,4 @@
 
 Well, here's some stuff.
 
-◊notes-list['last-note]
-
-◊notes-list['blog-list]
+◊notes-archive['blog-list]

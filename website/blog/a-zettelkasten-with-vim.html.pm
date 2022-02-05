@@ -1,10 +1,12 @@
 #lang pollen
 
-◊define-meta[publish-date]{Sun, 29 March 2020 20:20:20 +1000}
+◊(define-meta topic "A Zettelkasten with Vim")
+◊(define-meta publish-date "2020-03-29")
+◊(define-meta incipit "I've long struggled with categorising my notes. When I moved from paper to electronic notes I started to struggle; I felt like I needed to 'file' things because that's what you did with files on a computer. You put them in folders")
 
-◊topic{A Zettelkasten with Vim}
+◊topic{◊(select-from-metas 'topic metas)}
 
-◊incipit{I've long struggled with categorising my notes. When I moved from paper to electronic notes I started to struggle; I felt like I needed to 'file' things because that's what you did with files on a computer. You put them in folders}.
+◊incipit{◊(select-from-metas 'incipit metas)}.
 
 The problem is my mind doesn't work in folders; it works more like a network. This problem was mostly solved when I discovered wiki-style note-taking. For this, I used ◊link["https://github.com/vimwiki/vimwiki"]{Vimwiki} which works excellently. But I wanted for a theory and method with which to use this tool. Enter Zettelkasten.
 
@@ -17,6 +19,6 @@ So, I give you ◊link["https://github.com/Aarleks/zettel.vim"]{Zettel.vim}. It'
 Now I don't seem to be able to fix this fucking thing!
 
 ◊sig{—Alex Norman
-◊post-date{29 March, 2020}
 Gadigal-Wangal Country
+◊post-date{29 March, 2020}
 }

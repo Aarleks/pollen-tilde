@@ -1,10 +1,12 @@
 #lang pollen
 
-◊define-meta[publish-date]{Mon, 27 May 2019 20:20:20 +1000}
+◊(define-meta topic "100 Days of Code")
+◊(define-meta publish-date "2019-05-27")
+◊(define-meta incipit "I like learning. It's one of the reasons I stayed in tertiary education; I'm essentially a professional learner. One of my great joys of the last few years has been learning programming. But after being so busy with teaching since July 2016, I feel like it's time to spend some time deliberately practicing and learning programming again")
 
-◊topic{100 Days of Code}
+◊topic{◊(select-from-metas 'topic metas)}
 
-◊incipit{I like learning. It's one of the reasons I stayed in tertiary education; I'm essentially a professional learner. One of my great joys of the last few years has been learning programming. But after being so busy with teaching since July 2016, I feel like it's time to spend some time deliberately practicing and learning programming again}.
+◊incipit{◊(select-from-metas 'incipit metas)}.
 
 There is something deeply satisfying about solving a problem or completing a task programatically. I love writing scripts to make things easier to do. While I can't claim to be an expert in any sense of the word for either `R` or `Python`, the two programming languages I have used most, I know how to get around. What I realise I am lacking, however, is a deeper fluency. I know where to go to learn things, but I haven't yet absorbed the knowledge so that programmatic choices are second nature.
 
@@ -22,6 +24,6 @@ The projects I have in mind for my 100 days are:
 That should be plenty for 100 days. I'll tweet as I go, as per the rules, and probably report back here and on Github for anything I create.
 
 ◊sig{—Alex Norman
-◊post-date{27 May, 2019}
 Gadigal Land
+◊post-date{27 May, 2019}
 }

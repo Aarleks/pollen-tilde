@@ -1,10 +1,12 @@
 #lang pollen
 
-◊define-meta[publish-date]{Sun, 15 March 2019 20:20:20 +1000}
+◊(define-meta topic "A Note on Systematic Notetaking")
+◊(define-meta publish-date "2021-03-15")
+◊(define-meta incipit "One of the defining characteristics of academic research, across every discipline, is the review of existing literature. Generally speaking, if our written work does not demonstrate sufficient knowledge of existing literature within the appropriate field(s), it is rejected as insufficiently researched")
 
-◊topic{A Note on Systematic Notetaking}
+◊topic{◊(select-from-metas 'topic metas)}
 
-◊incipit{One of the defining characteristics of academic research, across every discipline, is the review of existing literature. Generally speaking, if our written work does not demonstrate sufficient knowledge of existing literature within the appropriate field(s), it is rejected as insufficiently researched}, or at best is considered 'undercooked' and in need of significant development.
+◊incipit{◊(select-from-metas 'incipit metas)}, or at best is considered 'undercooked' and in need of significant development.
 
 A review of literature (often explicitly called 'Literature Review' in some fields, which stands as an independent section or chapter) is not simply a list of publications. Rather, it is a sustained discussion, sometimes several thousand words in length (e.g. for a PhD thesis), about the history of work in your field and cognate fields, especially work that relates to your own research question or research topic. The review of literature includes theoretical developments and methodological advances, as well as decisive moments in the scholarship of your subject, and will generally review all recent important publications -- all of which justifies your research project as a logical next step within your field.
 
@@ -108,6 +110,6 @@ Pro-tip: paraphrase your own notes to flesh out your writing. To do this, instea
 ◊subhead{Bonus bonus!} Remember those thought bubbles and tangents you noted, marked by an asterisk or the like? Those will be super handy when it comes to pointing out problems in the literature that you think your research can help resolve. That's why it's important to Always. Be. Writing; especially while reading the work of your colleagues. Those think-writing notes, which you might end up turning into the beginnings of your own evergreen notes (see [Andy Matuschak](https://notes.andymatuschak.org/Evergreen_notes)) are gold. They can be part of your creative input to the discourse of your research area. Your contribution to the conversation that is your field. Your voice echoing from the giants' shoulders.
 
 ◊sig{—Alex Norman & Jack Tsonis
-◊post-date{15 March, 2021}
 Gadigal-Wangal Land
+◊post-date{15 March, 2021}
 }

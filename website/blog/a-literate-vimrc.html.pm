@@ -1,11 +1,12 @@
 #lang pollen
 
-◊define-meta[publish-date]{Fri, 06 July 2018 20:20:20 +1000}
+◊(define-meta topic "An Attempt at a Literate vimrc File")
+◊(define-meta publish-date "2018-07-06")
+◊(define-meta incipit "In which, for no good reason, I make my .vimrc file into a markdown-based blogpost that vim reads upon startup.")
 
-◊topic{An Attempt at a Literate vimrc File}
+◊topic{◊(select-from-metas 'topic metas)}
 
-
-◊incipit{In which, for no good reason, I make my .vimrc file into a markdown-based blogpost that vim reads upon startup.}
+◊incipit{◊(select-from-metas 'incipit metas)}
 
 ◊blockquote{◊em{Edit:} a few months after writing this post I moved away from using literate programming for my ◊in-line{vimrc} file. It was a fun experiment. (AN, Mar 2021)}
 

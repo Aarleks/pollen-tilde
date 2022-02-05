@@ -1,10 +1,12 @@
 #lang pollen
 
-◊define-meta[publish-date]{Wed, 22 April 2020 20:20:20 +1000}
+◊(define-meta topic "Using R to Send Feedback to Students")
+◊(define-meta publish-date "2020-04-22")
+◊(define-meta incipit "An important part of working with students on their assessment tasks is feedback. Students need detailed, specific comment on their work for the purposes of learning and self-improvement. While learning management systems serve this function, they tend to be clunky, anonymous, and unfriendly")
 
-◊topic{Using R to Send Feedback to Students}
+◊topic{◊(select-from-metas 'topic metas)}
 
-◊incipit{An important part of working with students on their assessment tasks is feedback. Students need detailed, specific comment on their work for the purposes of learning and self-improvement. While learning management systems serve this function, they tend to be clunky, anonymous, and unfriendly}. Frequently, I need to send a document with written feedback and an annotated copy of the submission, and email is a good, simple tool for that.
+◊incipit{◊(select-from-metas 'incipit metas)}. Frequently, I need to send a document with written feedback and an annotated copy of the submission, and email is a good, simple tool for that.
 
 Unfortunately, email clients like Outlook and even `mutt` don't make this easy at scale. Unless you want to do it manually, sending a different attachment to each of 80 students is hard and time-consuming.
 

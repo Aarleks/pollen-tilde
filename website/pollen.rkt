@@ -13,10 +13,23 @@
 	 pollen/file
 	 pollen/pagetree
 	 pollen/unstable/pygments
-	 txexpr)
+	 txexpr
+	 "util-posts.rkt"
+	 (prefix-in rss: "util-rss.rkt"))
 
 (provide ->html (all-defined-out))
 (provide (all-defined-out) highlight)
+(provide (all-from-out "util-posts.rkt"))
+
+; Site Variables ;
+(define atom-path "/feed.atom")
+(define site-name "~acn")
+(define site-author "Alex Norman")
+(define site-email "alex@alexnorman.xyz")
+(define site-url "alexnorman.xyz")
+(define site-description "Recent(ish) stuff from Alex Norman")
+
+; Main Functions ;
 
 (define (root . elements)
   (txexpr 'root empty (decode-elements elements
@@ -46,10 +59,14 @@
     (figcaption ,@caption)
     ))
 
-; heading styles
+;; heading styles ;;
+;;----------------;;
+
+; Page Title and H1 for the page
 (define (topic . text)
   `(topic ,@text))
 
+; A subhead
 (define (subhead . text)
   `(div [(class "subhead")] ,@text))
 
@@ -84,18 +101,29 @@
   ; to it and the publication date
   (define note-link
     (map (λ (p) `(p (a [[href ,(format "/~a" p) ] [class "notes"]] ,(get-note-topic p)) " - " ,(get-note-date p)))
+	 (rest (children post "index.ptree"))))
+  ; print it out in the doc
+  `(p ,@note-link))
+
+(define (notes-archive post)
+  ; map over each note and make a hyperlink
+  ; to it and the publication date
+  (define note-link
+    (map (λ (p) `(p (a [[href ,(format "/~a" p) ] [class "notes"]] ,(get-note-topic p)) " - " ,(get-note-date p)))
 	 (children post "index.ptree")))
   ; print it out in the doc
   `(p ,@note-link))
 
+; latest post has the first few sentences as a teaser ;
+(define (test-link post)
+  `(p (a [[href ,(format "/~a" post) ] [class "notes"]] ,(get-note-topic post)) " - " ,(get-note-date post)
+  (blockquote ,(note-incipit post) "… " (a [[href ,(format "/~a" post) ] [class "notes"]] "read more"))
+  ))
+
 (define (first-note post)
   ; print the incipit as a blurb
-  (define note-blurb
-    (map (λ (p) `(blockquote ,(note-incipit p) "… " (a [[href ,(format "/~a" p) ] [class "notes"]] "read more")))
-	 (children post "index.ptree")))
-  ; print it out in the doc
-  `(p ,(notes-list post)
-      ,@note-blurb)
+  `(p ,(test-link (first (children post "index.ptree"))))
+      ;,@note-blurb
 )
 
 ; get the note incipit of the note
@@ -114,29 +142,4 @@
   (match (get-source p)
     [(? path? src) (car (select-from-doc 'post-date src))]
     [_ `(symbol->string p)]))
-
-; Get the meta 'publish-date' from a post
-(define (rss-date p)
-  (select-from-metas 'publish-date p))
-
-; Make an rss feed from sublist in the index.ptree file
-(define (post-list post)
-  ; map over each note in the section and make a hyperlink
-  ; to it and the publication date
-  ; get title = get-note-topic
-  ; get link =
-  ; get date = get-note-date
-  ; get description
-  (define rss-list
-    (map (λ (p) `(item
-		    "\n"(title ,(get-note-topic p))
-		    "\n"(link ,(format "https://alexnorman.xyz/~a" p))
-		    "\n"(pubDate ,(rss-date p))
-		    "\n"(guid ,(format "https://alexnorman.xyz/~a" p))
-		    "\n"(description ,(format "<![CDATA[~a]]>" (note-incipit p)))
-		    "\n"))
-	   ;(a [[href ,(format "/~a" p) ] [class "notes"]] ,(get-note-topic p)) " - " ,(get-note-date p)))
-	 (children post "index.ptree")))
-  ; print it out in the doc
-  `(,@rss-list))
 
