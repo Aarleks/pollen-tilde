@@ -4,10 +4,8 @@ My website build using [Matthew Butterick's `pollen`](https://practicaltypograph
 
 ## TODO
 
-* Atom feed - use splitflap package function `express-xml` per Joel Dueck: https://github.com/otherjoel/cookbook-pollen/blob/master/cookbook/feed.rkt
 * add RSS feed button
 * fix 404 page css issue
-* fix RSS function for latest post
 * add a 'last updated' unique to each page
     * going from git: `git log -n1 --pretty=format%cD -- <file>`
     * just need to find out how to get the current filepath from Racket/Pollen and then call git to output the string to be converted.
