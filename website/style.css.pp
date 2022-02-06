@@ -152,6 +152,10 @@ div > a:after, a.notes:after, a.title:after, a.xref:after, a.index:after, a.soci
     content: none;
 }
 
+#socials {
+    padding-left: 20px;
+}
+
 a:hover {
     background: #fbf3f3;
     border-radius: 6px;

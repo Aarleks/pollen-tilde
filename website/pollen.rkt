@@ -14,12 +14,10 @@
 	 pollen/pagetree
 	 pollen/unstable/pygments
 	 txexpr
-	 "util-posts.rkt"
-	 (prefix-in rss: "util-rss.rkt"))
+	 )
 
 (provide ->html (all-defined-out))
 (provide (all-defined-out) highlight)
-(provide (all-from-out "util-posts.rkt"))
 
 ; Site Variables ;
 (define atom-path "/feed.atom")

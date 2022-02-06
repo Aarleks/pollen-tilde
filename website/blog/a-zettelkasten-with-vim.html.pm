@@ -16,8 +16,6 @@ Now that I've switched to ◊link["https://www.vim.org"]{Vim} for all my writing
 
 So, I give you ◊link["https://github.com/Aarleks/zettel.vim"]{Zettel.vim}. It's a work-in-progress and very early days so far. But I'm hoping it can be a useful little plugin that sticks pretty close to vanilla Vim; the exceptions will be the use of ◊link["https://github.com/junegunn/fzf"]{fzf} and its accompanying Vim plugin for fuzzy search, and ◊link["https://github.com/BurntSushi/ripgrep"]{ripgrep} for searching file contents.
 
-Now I don't seem to be able to fix this fucking thing!
-
 ◊sig{—Alex Norman
 Gadigal-Wangal Country
 ◊post-date{29 March, 2020}
