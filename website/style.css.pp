@@ -73,6 +73,7 @@ height: 100%;
 background: #fffff8;
 color: #333;
 padding: 10px;
+counter-reset: sidenote-counter;
 }
 
 ul {

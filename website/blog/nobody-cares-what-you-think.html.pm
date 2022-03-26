@@ -2,11 +2,11 @@
 
 ◊(define-meta topic "Nobody Cares What You Think")
 ◊(define-meta publish-date "2022-03-26")
-◊(define-meta incipit "One of the biggest errors we make as knowledge-work writers is believing people care about what we think. They don't.")
+◊(define-meta incipit "One of the biggest errors we make as knowledge-work writers is believing people care about what we think. They don't")
 
 ◊topic{◊(select-from-metas 'topic metas)}
 
-◊incipit{◊(select-from-metas 'incipit metas)}
+◊incipit{◊(select-from-metas 'incipit metas)}.
 
 This might seem provocative, and it is, but I'm not writing it simply to be a contrarian. Rather, I'm trying to cast light on what I believe is a fundamental problem with the way many in Anglophone contexts understand writing in the context of knowledge work. The problem I want to highlight is that, for the most part, when we teach people how to write for research or for knowledge-work professions, we tend to focus on teaching them how to explain what they think. While this may seem unproblematic, it is a tragic error that results in people finding expert-level writing "too dense" or "too academic" or simply "not relevant". What we ignore when we think of writing as 'explanation' is that the function of professional writing for readers is not to explain what you think, but rather to communicate to readers what ◊em{they} should think.◊note{I'm drawing heavily from the great Larry McEnerney, former Director of the Writing Program at UChicago: see ◊link["https://youtu.be/vtIzMaLkCaM"]{this excellent video}.}
 
