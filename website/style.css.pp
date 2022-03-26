@@ -342,7 +342,6 @@ padding: 0;
 .sidenote-number { counter-increment: sidenote-counter; }
 
 .sidenote-number:after, .sidenote:before {
-  font-family: et-book-roman-old-style;
   position: relative;
   vertical-align: baseline;
 }

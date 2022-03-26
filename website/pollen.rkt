@@ -26,6 +26,8 @@
 (define site-email "alex@alexnorman.xyz")
 (define site-url "alexnorman.xyz")
 (define site-description "Recent(ish) stuff from Alex Norman")
+(define footnote-list empty)
+(define note-mode "sidenotes")
 
 ; Main Functions ;
 
@@ -140,4 +142,25 @@
   (match (get-source p)
     [(? path? src) (car (select-from-doc 'post-date src))]
     [_ `(symbol->string p)]))
+
+
+; Iterated from code borrowed from Sancho McCann - https://github.com/sanchom/sanchom.github.io/blob/master-source/pollen.rkt
+; Defines a little sidenote or footnote (depending on the mode), numbered, and by default collapsed
+; to a small height. In print, these are all footnotes.
+(define (note #:expanded [expanded #f] . content)
+  (define footnote-number (+ 1 (length footnote-list)))
+
+  (set! footnote-list
+        (append footnote-list (list `(p ([class "footnote"] [id ,(format "fn-~a" footnote-number)])
+                                        ,(format "~a. " footnote-number) (a [[href ,(format "#fn-source-~a" footnote-number)] [class "backlink undecorated"]] " ↑ ") ,@content))))
+  (define refid (format "fn-~a" footnote-number))
+  (define subrefid (format "fn-~a-expand" footnote-number))
+  (if (equal? note-mode "sidenotes")
+      `(span [[class "sidenote-wrapper"]]
+             (span (label [[for ,refid] [class "margin-toggle sidenote-number"]])
+                   (input [[type "checkbox"] [id ,refid] [class "margin-toggle"]])
+                   (input [[type "checkbox"] [id ,subrefid] [class "margin-expand"]])
+                   (label [[for ,subrefid] [class ,(if expanded "sidenote expanded" "sidenote")] [hyphens "none"]] ,@content)))
+      `(span [[class "sidenote-wrapper"]]
+             (a [[href ,(format "#fn-~a" footnote-number)] [class "undecorated"]] (span [[class "sidenote-number"] [id ,(format "fn-source-~a" footnote-number)]])))))
 
