@@ -3,6 +3,7 @@
 index.html
 
 ◊blog-list{
+    blog/nobody-cares-what-you-think.html
     blog/systematic-notetaking.html
     blog/blastula-for-emailing-feedback.html
     blog/a-zettelkasten-with-vim.html

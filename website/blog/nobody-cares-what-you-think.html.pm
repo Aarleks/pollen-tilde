@@ -1,0 +1,24 @@
+#lang pollen
+
+◊(define-meta topic "Nobody Cares What You Think")
+◊(define-meta publish-date "2022-03-26")
+◊(define-meta incipit "One of the biggest errors we make as knowledge-work writers is believing people care about what we think. They don't.")
+
+◊topic{◊(select-from-metas 'topic metas)}
+
+◊incipit{◊(select-from-metas 'incipit metas)}
+
+This might seem provocative, and it is, but I'm not writing it simply to be a contrarian. Rather, I'm trying to cast light on what I believe is a fundamental problem with the way many in Anglophone contexts understand writing in the context of knowledge work. The problem I want to highlight is that, for the most part, when we teach people how to write for research or for knowledge-work professions, we tend to focus on teaching them how to explain what they think. While this may seem unproblematic, it is a tragic error that results in people finding expert-level writing "too dense" or "too academic" or simply "not relevant". What we ignore when we think of writing as 'explanation' is that the function of professional writing for readers is not to explain what you think, but rather to communicate to readers what ◊em{they} should think.◊note{I'm drawing heavily from the great Larry McEnerney, former Director of the Writing Program at UChicago: see ◊link["https://youtu.be/vtIzMaLkCaM"]{this excellent video}.}
+
+The simple fact is, people don't read just to find out what you or your organisation 'thinks' about something (even though sometimes they say they do). Instead, they read so they can better understand some problem or task they are working on and make a decision about it. They read your writing so they can do better thinking.
+
+Professional knowledge-work writing has a function for readers that is more than explaining the thinking of the author. Such an observation might seem like 'only semantics', but much writing advice misses it as a crucial orientation about what is going on for readers —that they read in order to act. The consequence of our omission is that we typically teach 'author-oriented' writing so people 'are able to write'; if the appropriate content is there and the grammar is good enough, then you get the tick. We've focussed so much on 'correctness' for the author that we miss teaching how to make text effective for our intended readers. As a consequence, we typically fail to understand how to manipulate text so readers understand what we mean. Instead, what we want are professional knowledge-work writers (researchers, programmers, scientists, policy makers, etc.) who know and understand how to write effectively for those who read their writing. It's not a semantic difference at all—it's a difference in understanding the purpose of writing in the professions. Quite simply, the main function of text in knowledge work contexts is to help readers comprehend the intended meaning of a text so they can do something with the information.
+
+Of course, some professions know this problem well; journalism is a good example of a field in which thinking about readers during writing is encultrated. But other fields, like academia and scientific writing, often ignore this or even fail to recognise reader comprehension as a problem. In fact, in my experience, most research institutions fail to recognise writing as a fundamental professional skill all together. In my career I've seen very little formal acknowledgement that there is any function or purpose for writing beyond 'saying what you think'. Very often there is no systematic vocational training or professional development on writing at all. This means our knowledge work training and development institutions are failing to help people develop what is clearly one of, if not ◊em{the}, core skill in knowledge work: writing for readers.
+
+The solution is pretty simple: we can start teaching writing as an applied vocational skill, and we can start doing so with readers front of mind. This will entail teaching grammar, of course, but more importantly it means teaching rhetoric.◊note{For this I lean heavily on the work of George Gopen and colleagues. See ◊link["https://georgegopen.com/"]{https://georgegopen.com/}} In professional knowledge work contexts this means teaching people to understand how readers read text. Moreover, it means teaching writing so that knowledge-worker authors understand how to write text that is functional for readers. Indeed, the craft of writing effectively ought to be a central part of any vocationally-aligned knowledge-work education program, and any professional development program aimed at the so-called white collar workforce. We want to teach people how to write to serve readers. We want to teach not to show what you think, but how to write in order to help other people do better thinking.
+
+◊sig{—Alex Norman
+Gadigal-Wangal Land
+◊post-date{26 March 2022}
+}
