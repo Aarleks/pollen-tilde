@@ -4,30 +4,30 @@ My website build using [Matthew Butterick's `pollen`](https://practicaltypograph
 
 ## TODO
 
-* fix 404 page css issue
-* add a 'last updated' unique to each page
-    * going from git: `git log -n1 --pretty=format%cD -- <file>`
-    * just need to find out how to get the current filepath from Racket/Pollen and then call git to output the string to be converted.
+* consider using `punct` instead of `pollen`
+* add old blog posts from dralexnorman.net
+* separate functions in Racket file into new writing and page building files
 * develop the resources page;
 * develop the teaching page;
 * add a cv page;
 
----
+## Sidenotes
 
-# Git Server Stuff
+Need to produce html that looks like this:
+```
+<span class="sidenote-wrapper">
+<span><label for="fn-3" class="margin-toggle sidenote-number"></label>
+<input type="checkbox" id="fn-3" class="margin-toggle"/>
+<input type="checkbox" id="fn-3-expand" class="margin-expand"/>
+<label for="fn-3-expand" class="sidenote" hyphens="none">If you’re not already reading this on a small screen, you can preview this behaviour by narrowing this browser window.</label>
+</span></span>
+```
 
-Stagit - https://git.codemadness.org/stagit/
+From something like this:
+```
+◊note{Note text goes in here.}
+◊note[#:expanded #t]{A note that will always be fully expanded, as oppossed to collapsed when too long.}
+```
 
-https://oscarbenedito.com/blog/2020/06/setting-up-a-personal-git-server/
-
-https://theohenson.com/blog-git-server.html
-
-Uses `nginx` https://hosakacorp.net/p/stagit-server.html
-
-https://margiolis.net/articles/openbsd-git-server-with-stagit1-web-frontend.html
-
-Fork of Oscar Benedito's `stagit` https://git.lmburns.com/stagit-md/
-
-https://www.brianlane.com/post/stagit-scripts/
-
+Which, I guess, means all I really need to do is figure out how to get the note number to add as it goes.
 
